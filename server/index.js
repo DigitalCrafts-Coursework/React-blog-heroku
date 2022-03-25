@@ -2,7 +2,10 @@ const express = require("express");
 const app = express(); // create express app
 const path = require("path");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const port = process.env.PORT || 3000;
+
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, "..", "build")));
 app.use(express.static("public"));
