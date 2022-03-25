@@ -22,9 +22,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //!needed for heroku?
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "index.html"));
-});
+// app.options("*", cors());
+
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "..", "index.html"));
+// });
 
 const router = require("./routes/router");
 app.use("/", router);
