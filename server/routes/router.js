@@ -10,14 +10,6 @@ const config = {
   password: "QUFXYuwSAv0clTtDMYmiWhZxOFOqKIOS",
 };
 
-// const config = {
-//   host: "localhost",
-//   port: 5432,
-//   database: "react_blog",
-//   user: "matthewvolny",
-//   password: "Ronweasley1@@@",
-// };
-
 const database = pgPromise(config);
 
 //retrieve posts from the db
