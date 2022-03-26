@@ -37,7 +37,7 @@ router.post("/addPost", async (req, res) => {
       "INSERT INTO posts (post_id, title, content) VALUES ($1, $2, $3)";
     await database.none(queryString, [id, title, content]);
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 });
 

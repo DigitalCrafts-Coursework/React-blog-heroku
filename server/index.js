@@ -7,6 +7,8 @@ const port = process.env.PORT || 3000;
 
 //needed to make requests from heroku hosted app
 app.use(cors());
+
+//!added this,did not seem to make a difference
 app.options("*", cors());
 
 app.use(express.static(path.join(__dirname, "..", "build")));
@@ -22,9 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-//!needed for heroku?
-//
-
+//!needed for posts in heroku? not sure
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "..", "index.html"));
 // });
